@@ -1,5 +1,6 @@
 This is a basic routing app of login and signup page.
 
+Follow these steps.
 Steps: 
     * download and install node js in your local from `https://nodejs.org/en/download/`
       and run this command in your cmd `npm -version`
