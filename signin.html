@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        console.log('on Load JS File..')
+
+        getRoute = (event) =>{
+            console.log('value--'+ event.value)
+            var homeOrigin = location.origin;
+            location.href = homeOrigin;
+        }
+
+        validateForm = ()=> {
+            let emailId = document.getElementById("emailId").value;
+            let pass = document.getElementById("pass").value;
+            
+            if (emailId == "s@m.com" && pass == "sm@12345") {
+                alert("Access Granted");
+            }else{
+                alert("Access Denied");
+            }  
+          }
+    </script>  
+    <title>Document</title>
+    <style>
+        .content {
+          max-width: 1200px;
+          margin: auto;
+          background-color: rgb(222, 240, 226);
+          padding: 10px;
+        }
+        </style>
+</head>
+<body class="content">
+
+    <div class="w3-card-4" style="width:50%;">
+        <header class="w3-container w3-brown">
+          <h1>Sign In</h1>
+        </header>
+    
+        <div class="w3-container">
+                Email Id: <input type="text" name="emailId" id="emailId"> </br></br>
+                Password: <input type="text" name="pass" id="pass"> </br></br>
+        </div>
+    
+        <footer class="w3-container w3-brown">
+          <h5> <button value="Home" onclick="getRoute(this)">Home</button> 
+          <button value="submit" onclick="validateForm()">submit</button> </h5>
+        </footer>
+      </div>
+
+      <p id="valueInput">
+          <p>Email Id: s@m.com</p>
+          <p>password: sm@12345</p>
+      </p> 
+</body>
+</html>

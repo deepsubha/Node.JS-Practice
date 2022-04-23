@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        console.log('on Load JS File..')
+
+        getRoute = (event) =>{
+            console.log('value--'+ event.value)
+            var currentPath = window.location.href; 
+            location.href = currentPath + event.value ;
+        }
+    </script>  
+    <title>Document</title>
+    <style>
+        .content {
+          max-width: 1200px;
+          margin: auto;
+          background-color: antiquewhite;
+          padding: 10px;
+        }
+        </style>
+</head>
+<body class="content">
+
+    <div class="w3-card-4" style="width:50%;">
+        <header class="w3-container w3-brown">
+          <h1>This is the default home page.</h1>
+        </header>
+    
+        <div class="w3-container">
+            Don't have an account? Create an account <button value="signup" onclick="getRoute(this)">Sign Up</button> </br></br>
+            Already have an account? Need to sign in <button value="signin" onclick="getRoute(this)">Sign In</button>
+        </div>
+    
+        <!--<footer class="w3-container w3-brown">
+          <h5>Footer</h5>
+        </footer>-->
+      </div>
+</body>
+</html>

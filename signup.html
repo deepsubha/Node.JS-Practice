@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        console.log('on Load JS File..')
+
+        getRoute = (event) =>{
+            console.log('value--'+ event.value)
+            var homeOrigin = location.origin;
+            location.href = homeOrigin;
+        }
+
+        validateForm = ()=> {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let emailId = document.getElementById("emailId").value;
+            let pass = document.getElementById("pass").value;
+            
+            if (fname == "" || lname == "" || emailId == "" || pass == "") {
+              alert("All Fields must be filled out");
+            }else{
+                var customHtml = 'Name: '+fname+','+lname+'</br>Email Id: '+emailId+'</br>password: '+pass;
+                document.getElementById("valueInput").innerHTML = customHtml;
+            }  
+          }
+    </script>  
+    <title>Document</title>
+    <style>
+        .content {
+          max-width: 1200px;
+          margin: auto;
+          background-color: rgb(202, 191, 176);
+          padding: 10px;
+        }
+        </style>
+</head>
+<body class="content">
+
+    <div class="w3-card-4" style="width:50%;">
+        <header class="w3-container w3-brown">
+          <h1>Sign Up</h1>
+        </header>
+    
+        <div class="w3-container">
+                First Name: <input type="text" name="fname" id="fname"> </br></br>
+                Last Name: <input type="text" name="lname" id="lname"> </br></br>
+                Email Id: <input type="text" name="emailId" id="emailId"> </br></br>
+                Password: <input type="text" name="pass" id="pass"> </br></br>
+        </div>
+    
+        <footer class="w3-container w3-brown">
+          <h5> <button value="Home" onclick="getRoute(this)">Home</button> 
+          <button value="submit" onclick="validateForm()">submit</button> </h5>
+        </footer>
+      </div>
+
+      <p id="valueInput"></p> 
+</body>
+</html>
