@@ -4,6 +4,8 @@
 
 *Steps:* 
 
+This site was built using [GitHub Pages](https://pages.github.com/).
+
     > download and install node js in your local [link]https://nodejs.org/en/download/
     
     > run this command in your cmd "npm -version"
