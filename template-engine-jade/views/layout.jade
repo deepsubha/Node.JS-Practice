@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    ol
+      li Text 1
+      li Text 2
+      li Text 3
+      li.
+        ashfkjshdfkj shfkjhhf dskhfkh sdfhkhdfkskdf sdkhfkdskdsfk skfhksghgldghj vbkdfhgh vefhvkhvklj vihhvk vkdhfvkhv
+        vkdhvkhv v dflv v hkdhvkhvkv vkdhvkhvkv. khvkhvkhvkh v ihkvh vkhkhk hvk khkhvkhvk vkhkvhvh
+        vkhvkhv vkhvkhdk rywofpi s ougpe
+        syfiourejn doup epgogjeljg
+    // Unbuffered Code
+    - var number = 99
+    - var coffee = 'latte'
+    - var list = ["Belgium", "France", "China"]
+
+    // Buffered Code
+    p= "99 times 2 is: " + number*2
+    p= "I prefer " + coffee + " over cappuccino"
+
+    // This is a Buffered Comment
+
+    //- This is an Unbuffered Comment
+
+    //
+        This is
+        a multiline
+        comment
+
+    //- Replacing with a variable
+    - var name = 'subhadeep maiti'
+
+    h2 Printing name in all lower caps
+        p Mr. #{name}
+
+    h2 printing name with first letter of each name in uppercase
+        p Mr. #{name.charAt(0).toUpperCase() + name.slice(1)}
+
+    - var superheroes = ["Spiderman", "Ironman", "Hulk", "Thor"]
+
+    // Use of each
+    ol
+        each hero in superheroes
+            li = hero
+
+    // Use of while
+
+    //- - var count = 0
+    //- p #{superheroes[count]} SMASH!
+    //- while superheroes[count] != 'Hulk'
+    //-     p #{superheroes[count]} SMASH!
+    //-      count ++
+
+    //- p #{superheroes[count]} SMASH!
+
+    //-input element
+    input(type='text').class-name#elementid
+
+    -var testText = 'This is a sample test text.'
+    h1= testText 
+    h1 testText 
+
+    //-if condition
+    if condition
+      p It is true condiation
+    else
+      p It is a false condition
+
+    //-mixed expression text
+    -var temp = 'Subhadeep'
+    p Thanks for reading this, #{temp}
